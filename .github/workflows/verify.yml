@@ -29,6 +29,11 @@ jobs:
 
       - name: Setup Bats libraries
         uses: brokenpip3/setup-bats-libs@0.1.0
+        with:
+          support-path: ${{ github.workspace }}/test/test_helper/bats-support
+          assert-path: ${{ github.workspace }}/test/test_helper/bats-assert
+          detik-install: false
+          file-install: false
 
       - name: Run Tests
         run: bats --trace --print-output-on-failure test/
