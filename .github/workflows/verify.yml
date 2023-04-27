@@ -1,7 +1,6 @@
 name: Verify
 on: [push, pull_request]
 jobs:
-
   static_checks:
     name: Static Checks
     runs-on: ubuntu-latest
