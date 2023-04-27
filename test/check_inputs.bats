@@ -16,13 +16,13 @@ setup() {
 @test "support latest versions" {
   run ./check_inputs.sh "latest" "latest"
   assert_success
-  assert_output "::notice::Using the latest IG Publisher\n::notice::Using the latest SUSHI"
+  echo -e "::notice::Using the latest IG Publisher\n::notice::Using the latest SUSHI" | assert_output
 }
 
 @test "disable sushi" {
   run ./check_inputs.sh ./check_inputs.sh "latest" "false"
   assert_success
-  assert_output "::notice::Using the latest IG Publisher\n::notice::Not using SUSHI"
+  echo -e "::notice::Using the latest IG Publisher\n::notice::Not using SUSHI" | assert_output
 }
 
 @test "error: show error and exit with 22" {
