@@ -1,0 +1,67 @@
+name: 'FHIR IG Action'
+description: ''
+inputs:
+  ig-publisher:
+    description: ''
+    required: false
+    default: 'latest'
+  sushi:
+    description: ''
+    required: false
+    default: 'false'
+
+runs:
+  using: 'composite'
+  steps:
+    # Install Java 17 for the IG Publisher and the validation engine
+    # https://github.com/actions/setup-java
+    - name: 'Install Java'
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+
+    # Install ruby
+    # https://github.com/ruby/setup-ruby
+    - name: 'Install Ruby'
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.2'
+
+    # Install Jekyll
+    # https://jekyllrb.com/docs/installation/ubuntu/
+    - name: 'Install Jekyll'
+      shell: bash
+      run: |
+        gem install jekyll bundler
+        jekyll -v
+
+    # Install node if SUSHI is needed
+    # https://github.com/actions/setup-node
+    - name: 'Install Node.js'
+      if: ${{ inputs.sushi != 'false' }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    # Install SUSHI if needed
+    - name: 'Install SUSHI'
+      if: ${{ inputs.sushi != 'false' }}
+      shell: bash
+      run: |
+        npm install -g fsh-sushi@${{ inputs.sushi }}
+        sushi --version
+
+    # Download the IG Publisher
+    - name: 'Download the IG Publisher'
+      shell: bash
+      run: |
+        curl -L https://github.com/HL7/fhir-ig-publisher/releases/{{ inputs.ig-publisher }}/download/publisher.jar -o input-cache/publisher.jar
+        chmod +x input-cache/publisher.jar
+
+    # We can build the IG now
+    - name: 'Build the IG'
+      shell: bash
+      run: java -jar input-cache/publisher.jar ig.ini
+
+# To try: https://github.com/actions/toolkit/blob/main/docs/problem-matchers.md
