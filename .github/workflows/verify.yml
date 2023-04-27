@@ -22,10 +22,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Setup BATS
+      - name: Setup Bats
         uses: mig4/setup-bats@v1
         with:
           bats-version: 1.9.0
+
+      - name: Setup Bats libraries
+        uses: brokenpip3/setup-bats-libs@0.1.0
 
       - name: Run Tests
         run: bats --trace --print-output-on-failure test/
