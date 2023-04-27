@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Setup Bats
-        uses: mig4/setup-bats@v1
+        uses: panubo/setup-bats-action@v2
         with:
           bats-version: 1.9.0
 
