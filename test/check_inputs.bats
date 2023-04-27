@@ -20,7 +20,7 @@ setup() {
 }
 
 @test "disable sushi" {
-  run ./check_inputs.sh ./check_inputs.sh "latest" "false"
+  run ./check_inputs.sh "latest" "false"
   assert_success
   echo -e "::notice::Using the latest IG Publisher\n::notice::Not using SUSHI" | assert_output
 }
