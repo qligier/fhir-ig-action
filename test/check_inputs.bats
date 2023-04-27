@@ -14,18 +14,19 @@ setup() {
 }
 
 @test "support latest versions" {
-  ./check_inputs.sh "latest" "latest"
+  run ./check_inputs.sh "latest" "latest"
   assert_success
   assert_output "::notice::Using the latest IG Publisher\n::notice::Using the latest SUSHI"
 }
 
 @test "disable sushi" {
-  ./check_inputs.sh ./check_inputs.sh "latest" "false"
+  run ./check_inputs.sh ./check_inputs.sh "latest" "false"
   assert_success
   assert_output "::notice::Using the latest IG Publisher\n::notice::Not using SUSHI"
 }
 
 @test "error: show error and exit with 22" {
+  bats_require_minimum_version 1.5.0
   run -22 ./check_inputs.sh "false" "1.2.3"
-  assert_output "ERROR: script.sh, line 11: this is not so good"
+  assert_output "::error::Bad IG Publisher version"
 }
