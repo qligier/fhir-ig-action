@@ -17,6 +17,17 @@ runs:
       shell: bash
       run: check_inputs.sh ${{ inputs.ig-publisher }} ${{ inputs.sushi }}
 
+    - name: 'PWD1'
+      run: pwd
+      shell: bash
+
+    - name: 'Checkout the repository'
+      uses: actions/checkout@v3
+
+    - name: 'PWD2'
+      run: pwd
+      shell: bash
+
     # Install Java 17 for the IG Publisher and the validation engine
     # https://github.com/actions/setup-java
     - name: "Install Java"
