@@ -7,7 +7,36 @@ This action provides the following functionality for [GitHub Actions](actions) u
 
 ## Usage
 
-### Simple IG
+The action can be configured with the following inputs:
+
+<dl>
+<dt>ig-publisher</dt>
+<dd>The version of the IG Publisher to use. The value can be a full version (i.e. <em>x.y.z</em>) or the keyword 
+'<strong>latest</strong>'. The default value is '<em>latest</em>'.</dd>
+
+<dt>sushi</dt>
+<dd>The version of SUSHI to use. The value can be a partial or full version (i.e. <em>x</em>, <em>x.y</em> or <em>x.
+y.z</em>), the keyword '<strong>latest</strong>', or the keyword '<strong>false</strong>' to disable SUSHI. The 
+default value is '<strong>false</strong>'.</dd>
+</dl>
+
+### Examples
+
+The following example will build an IG with the latest version of the IG Publisher, without SUSHI. The _ig.ini_ file is
+expected in the top directory of the project.
+
+```yaml
+name: Build the IG
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: qligier/fhir-ig-action@v1
+```
+
+Another example for a SUSHI IG, with specific versions:
 
 ```yaml
 name: Build the IG
@@ -19,7 +48,22 @@ jobs:
       - uses: actions/checkout@v3
       - uses: qligier/fhir-ig-action@v1
         with:
-          ig-publisher: "latest"
+          ig-publisher: "1.3.5"
+          sushi: "2.10"
+```
+
+To build an IG in another directory, you should use the [working-directory](idstepsrun) configuration:
+
+```yaml
+name: Build the IG
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: qligier/fhir-ig-action@v1
+        working-directory: ./folder/my-ig # This will use ./folder/my-ig/ig.ini
 ```
 
 ## License
@@ -29,3 +73,4 @@ This project is released under the [MIT License](https://github.com/qligier/fhir
 [igpublisher]: https://github.com/HL7/fhir-ig-publisher/
 [sushi]: https://github.com/FHIR/sushi
 [actions]: https://docs.github.com/en/actions
+[idstepsrun]: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsrun
