@@ -68,5 +68,8 @@ runs:
     # We can build the IG now
     - name: "Build the IG"
       shell: bash
+      env:
+        FORCE_COLOR: "true" # Force colors in SUSHI output
+        FORCE_FANCY_CHARACTERS: "true" # Force fancy characters in SUSHI output
       run: java -jar input-cache/publisher.jar ig.ini
 # To try: https://github.com/actions/toolkit/blob/main/docs/problem-matchers.md
