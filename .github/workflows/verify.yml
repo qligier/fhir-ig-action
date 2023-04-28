@@ -22,11 +22,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      # https://github.com/panubo/setup-bats-action
       - name: Setup Bats
         uses: panubo/setup-bats-action@v2
         with:
           bats-version: 1.9.0
 
+      # https://github.com/brokenpip3/setup-bats-libs
       - name: Setup Bats libraries
         uses: brokenpip3/setup-bats-libs@0.1.0
         with:
