@@ -15,7 +15,7 @@ runs:
   steps:
     - name: "Check the inputs"
       shell: bash
-      run: check_inputs.sh ${{ inputs.ig-publisher }} ${{ inputs.sushi }}
+      run: ./check_inputs.sh ${{ inputs.ig-publisher }} ${{ inputs.sushi }}
       working-directory: ${{ github.action_path }}
 
     # Install Java 17 for the IG Publisher and the validation engine
@@ -61,8 +61,9 @@ runs:
     - name: "Download the IG Publisher"
       shell: bash
       run: |
-        curl -L https://github.com/HL7/fhir-ig-publisher/releases/${{ inputs.ig-publisher }}/download/publisher.jar -o input-cache/publisher.jar
-        chmod +x input-cache/publisher.jar
+        mkdir ./input-cache
+        curl -L https://github.com/HL7/fhir-ig-publisher/releases/${{ inputs.ig-publisher }}/download/publisher.jar -o ./input-cache/publisher.jar
+        chmod +x ./input-cache/publisher.jar
 
     # We can build the IG now
     - name: "Build the IG"
