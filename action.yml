@@ -13,6 +13,10 @@ inputs:
 runs:
   using: "composite"
   steps:
+    - name: "Check the inputs"
+      shell: bash
+      run: ./check_inputs.sh ${{ inputs.ig-publisher }} ${{ inputs.sushi }}
+
     # Install Java 17 for the IG Publisher and the validation engine
     # https://github.com/actions/setup-java
     - name: "Install Java"
