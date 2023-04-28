@@ -69,4 +69,7 @@ runs:
     - name: "Build the IG"
       shell: bash
       run: java -jar input-cache/publisher.jar ig.ini
-# To try: https://github.com/actions/toolkit/blob/main/docs/problem-matchers.md
+      env:
+        FORCE_COLOR: 'true'
+        FORCE_FANCY_CHARACTERS: 'true'
+      # To try: https://github.com/actions/toolkit/blob/main/docs/problem-matchers.md
