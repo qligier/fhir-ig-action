@@ -1,5 +1,6 @@
 name: "FHIR IG Action"
-description: ""
+description: "A GitHub Action for FHIR IGs."
+author: "Quentin Ligier"
 inputs:
   ig-publisher:
     description: "The IG Publisher version to use. 'latest' | 'x.y.z'"
@@ -73,3 +74,6 @@ runs:
         FORCE_FANCY_CHARACTERS: "true" # Force fancy characters in SUSHI output
       run: java -jar input-cache/publisher.jar ig.ini
 # To try: https://github.com/actions/toolkit/blob/main/docs/problem-matchers.md
+branding:
+  icon: "play"
+  color: "orange"
