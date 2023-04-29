@@ -5,7 +5,7 @@ set -o nounset  # abort on unbound variable
 set -o pipefail # don't hide errors within pipes
 
 if [[ $# -ne 2 ]]; then
-    echo "::error::Illegal number of parameters"
+  echo "::error::Illegal number of parameters"
 fi
 
 IG_PUBLISHER_VERSION=$1
