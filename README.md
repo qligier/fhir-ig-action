@@ -1,5 +1,11 @@
 # fhir-ig-action
 
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/qligier/fhir-ig-action)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/qligier/fhir-ig-action/verify.yml)
+![GitHub last commit](https://img.shields.io/github/last-commit/qligier/fhir-ig-action)
+![GitHub](https://img.shields.io/github/license/qligier/fhir-ig-action)
+[![CHANGELOG](https://img.shields.io/badge/-CHANGELOG-blue)](/qligier/fhir-ig-action/blob/main/CHANGELOG.md)
+
 This action provides the following functionality for [GitHub Actions](actions) users:
 
 - Build a FHIR IG with the [IG Publisher](igpublisher)
@@ -15,8 +21,8 @@ The action can be configured with the following inputs:
 '<strong>latest</strong>'. The default value is '<em>latest</em>'.</dd>
 
 <dt>sushi</dt>
-<dd>The version of SUSHI to use. The value can be a partial or full version (i.e. <em>x</em>, <em>x.y</em> or <em>x.
-y.z</em>), the keyword '<strong>latest</strong>', or the keyword '<strong>false</strong>' to disable SUSHI. The 
+<dd>The version of SUSHI to use. The value can be a partial or full version (i.e. <em>x</em>, <em>x.y</em> or 
+<em>x.y.z</em>), the keyword '<strong>latest</strong>', or the keyword '<strong>false</strong>' to disable SUSHI. The 
 default value is '<strong>false</strong>'.</dd>
 </dl>
 
@@ -68,7 +74,17 @@ jobs:
 
 ## License
 
-This project is released under the [MIT License](https://github.com/qligier/fhir-ig-action/blob/main/LICENSE.txt).
+This project is released under the [MIT License](/qligier/fhir-ig-action/blob/main/LICENSE.txt).
+
+## Development
+
+Issues and pull requests are very welcome :blue_heart:
+
+Code contributions must pass the code checks: [shfmt](https://github.com/patrickvane/shfmt),
+[shellcheck](https://www.shellcheck.net) and [Prettier](https://prettier.io). See the
+[GitHub Action file](/qligier/fhir-ig-action/blob/main/.github/workflows/verify.yml) for details.
+
+![Alt](https://repobeats.axiom.co/api/embed/606c44316ea2a19b24c7fd98f732796195955edc.svg "Repobeats analytics image")
 
 [igpublisher]: https://github.com/HL7/fhir-ig-publisher/
 [sushi]: https://github.com/FHIR/sushi

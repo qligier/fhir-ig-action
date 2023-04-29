@@ -2,11 +2,11 @@ name: "FHIR IG Action"
 description: ""
 inputs:
   ig-publisher:
-    description: ""
+    description: "The IG Publisher version to use. 'latest' | 'x.y.z'"
     required: false
     default: "latest"
   sushi:
-    description: ""
+    description: "The SUSHI version to use. 'latest' | 'false' | 'x' | 'x.y' | 'x.y.z'"
     required: false
     default: "false"
 
