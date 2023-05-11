@@ -70,8 +70,8 @@ runs:
     - name: "Build the IG"
       shell: bash
       env:
-        FORCE_COLOR: "true" # Force colors in SUSHI output
-        FORCE_FANCY_CHARACTERS: "true" # Force fancy characters in SUSHI output
+        FORCE_COLOR: "false" # Force colors in SUSHI output
+        FORCE_FANCY_CHARACTERS: "false" # Force fancy characters in SUSHI output
       run: |
         echo "::add-matcher::${{ github.action_path }}/sushi-problem-matcher.json"
         java -jar input-cache/publisher.jar ig.ini

@@ -4,16 +4,16 @@
       "owner": "sushi",
       "pattern": [
         {
-          "regexp": "^Sushi: (?>\\x1B\\[[0-9;]*m)*(error|warn)(?>\\x1B\\[[0-9;]*m)* (.+)$",
+          "regexp": "^Sushi: (error|warn) (.+)\\s+\\(\\d{2}:\\d{2}\\.\\d{3}\\)$",
           "severity": 1,
           "message": 2
         },
         {
-          "regexp": "^Sushi:   File: (.+)$",
+          "regexp": "^Sushi:   File: (.+)\\s+\\(\\d{2}:\\d{2}\\.\\d{3}\\)$",
           "file": 1
         },
         {
-          "regexp": "^Sushi:   Line: (\\d+)( - (\\d+))?$",
+          "regexp": "^Sushi:   Line: (\\d+)( - (\\d+))?\\s+\\(\\d{2}:\\d{2}\\.\\d{3}\\)$",
           "line": 1
         }
       ]
