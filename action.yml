@@ -68,8 +68,7 @@ runs:
 
     - name: "Enable problem matchers"
       shell: bash
-      run: echo "::add-matcher::sushi-problem-matcher.json"
-      working-directory: ${{ github.action_path }}
+      run: echo "::add-matcher::${{ github.action_path }}/sushi-problem-matcher.json"
 
     # We can build the IG now
     - name: "Build the IG"
