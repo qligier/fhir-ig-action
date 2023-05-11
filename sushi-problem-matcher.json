@@ -4,7 +4,7 @@
       "owner": "sushi",
       "pattern": [
         {
-          "regexp": "^Sushi: (error|warning) (.+)$",
+          "regexp": "^Sushi: (error|warn) (.+)$",
           "severity": 1,
           "message": 2
         },
@@ -13,7 +13,7 @@
           "file": 1
         },
         {
-          "regexp": "^Sushi:   Line: (.+)$",
+          "regexp": "^Sushi:   Line: (\\d+)( - (\\d+))?$",
           "line": 1
         }
       ]
