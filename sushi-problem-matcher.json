@@ -4,7 +4,7 @@
       "owner": "sushi",
       "pattern": [
         {
-          "regexp": "^Sushi: (error|warn) (.+)$",
+          "regexp": "^Sushi: (?>\\x1B\\[[0-9;]*m)*(error|warn)(?>\\x1B\\[[0-9;]*m)* (.+)$",
           "severity": 1,
           "message": 2
         },
