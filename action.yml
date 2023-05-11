@@ -72,7 +72,9 @@ runs:
       env:
         FORCE_COLOR: "true" # Force colors in SUSHI output
         FORCE_FANCY_CHARACTERS: "true" # Force fancy characters in SUSHI output
-      run: java -jar input-cache/publisher.jar ig.ini
+      run: |
+        echo "::add-matcher::sushi-problem-matcher.json"
+        java -jar input-cache/publisher.jar ig.ini
 # To try: https://github.com/actions/toolkit/blob/main/docs/problem-matchers.md
 branding:
   icon: "play"
