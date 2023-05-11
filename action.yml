@@ -66,16 +66,19 @@ runs:
         curl -L https://github.com/HL7/fhir-ig-publisher/releases/${{ inputs.ig-publisher }}/download/publisher.jar -o ./input-cache/publisher.jar
         chmod +x ./input-cache/publisher.jar
 
+    - name: "Enable problem matchers"
+      shell: bash
+      run: echo "::add-matcher::sushi-problem-matcher.json"
+      working-directory: ${{ github.action_path }}
+
     # We can build the IG now
     - name: "Build the IG"
       shell: bash
       env:
         FORCE_COLOR: "true" # Force colors in SUSHI output
         FORCE_FANCY_CHARACTERS: "true" # Force fancy characters in SUSHI output
-      run: |
-        echo "::add-matcher::sushi-problem-matcher.json"
-        java -jar input-cache/publisher.jar ig.ini
-# To try: https://github.com/actions/toolkit/blob/main/docs/problem-matchers.md
+      run: java -jar input-cache/publisher.jar ig.ini
+
 branding:
   icon: "play"
   color: "orange"

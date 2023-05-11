@@ -4,14 +4,16 @@
       "owner": "sushi",
       "pattern": [
         {
-          "regexp": "^(error|warning) (.+)$",
+          "regexp": "^Sushi: (error|warning) (.+)$",
           "severity": 1,
           "message": 2
-        }, {
-          "regexp": "^  File: (.+)$",
+        },
+        {
+          "regexp": "^Sushi:   File: (.+)$",
           "file": 1
-        }, {
-          "regexp": "^  Line: (.+)$",
+        },
+        {
+          "regexp": "^Sushi:   Line: (.+)$",
           "line": 1
         }
       ]
