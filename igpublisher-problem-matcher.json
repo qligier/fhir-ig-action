@@ -5,11 +5,11 @@
       "severity": "error",
       "pattern": [
         {
-          "regexp": "^(Stack Dump \\(for debugging\\):\\s+\\(\\d{2}:\\d{2}\\.\\d{3}\\))$",
+          "regexp": "^Stack Dump \\(for (debugging)\\):\\s+\\(\\d{2}:\\d{2}\\.\\d{3}\\)$",
           "code": 1
         },
         {
-          "regexp": "(.+)",
+          "regexp": "^(.+)$",
           "message": 1
         }
       ]
