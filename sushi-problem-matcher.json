@@ -23,7 +23,7 @@
       "severity": "warning",
       "pattern": [
         {
-          "regexp": "^Sushi: (?>\\x1B\\[[0-9;]*m)*(warn )(?>\\x1B\\[[0-9;]*m)* (.+)\\s+\\(\\d{2}:\\d{2}\\.\\d{3}\\)$",
+          "regexp": "^Sushi: (?>\\x1B\\[[0-9;]*m)*(warn\\s)(?>\\x1B\\[[0-9;]*m)* (.+)\\s+\\(\\d{2}:\\d{2}\\.\\d{3}\\)$",
           "severity": 1,
           "message": 2
         },
