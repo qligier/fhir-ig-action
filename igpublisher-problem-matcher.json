@@ -1,0 +1,17 @@
+{
+  "problemMatcher": [
+    {
+      "owner": "igpublisher",
+      "severity": "error",
+      "pattern": [
+        {
+          "regexp": "^Sushi: Stack Dump (for debugging):\\s+\\(\\d{2}:\\d{2}\\.\\d{3}\\)$"
+        },
+        {
+          "regexp": "^(.+)$",
+          "message": 1
+        }
+      ]
+    }
+  ]
+}

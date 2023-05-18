@@ -17,6 +17,25 @@
           "line": 1
         }
       ]
+    },
+    {
+      "owner": "sushi",
+      "severity": "warning",
+      "pattern": [
+        {
+          "regexp": "^Sushi: (?>\\x1B\\[[0-9;]*m)*(warn )(?>\\x1B\\[[0-9;]*m)* (.+)\\s+\\(\\d{2}:\\d{2}\\.\\d{3}\\)$",
+          "severity": 1,
+          "message": 2
+        },
+        {
+          "regexp": "^Sushi:   File: (.+)\\s+\\(\\d{2}:\\d{2}\\.\\d{3}\\)$",
+          "file": 1
+        },
+        {
+          "regexp": "^Sushi:   Line: (\\d+)( - (\\d+))?\\s+\\(\\d{2}:\\d{2}\\.\\d{3}\\)$",
+          "line": 1
+        }
+      ]
     }
   ]
 }
