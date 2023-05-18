@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- Added parsing of Sushi errors with a GitHub Action problem matcher.
+- Added parsing of Sushi warnings and errors with a GitHub Action problem matcher.
 
 ## [0.1.0] - 2023-04-29
 
