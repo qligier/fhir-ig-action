@@ -41,7 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: qligier/fhir-ig-action@v1
+      - uses: qligier/fhir-ig-action@v0.1.0
 ```
 
 Another example for a SUSHI IG, with specific versions:
@@ -54,7 +54,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: qligier/fhir-ig-action@v1
+      - uses: qligier/fhir-ig-action@v0.1.0
         with:
           ig-publisher: "1.3.5"
           sushi: "2.10"
@@ -72,7 +72,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: qligier/fhir-ig-action@v1
+      - uses: qligier/fhir-ig-action@v0.1.0
         working-directory: ./folder/my-ig # This will use ./folder/my-ig/ig.ini
 ```
 
