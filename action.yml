@@ -73,7 +73,7 @@ runs:
         FORCE_COLOR: "true" # Force colors in SUSHI output
         FORCE_FANCY_CHARACTERS: "true" # Force fancy characters in SUSHI output
       # Here we enable problem matchers that will allow GitHub to parse errors and warnings in the CLI output
-      # See https://github.com/actions/toolkit/blob/main/docs/problem-matchers.md
+      # See https://github.com/qligier/fhir-ig-action/wiki/Problem-matchers
       run: |
         echo "::add-matcher::${{ github.action_path }}/igpublisher-problem-matcher.json"
         echo "::add-matcher::${{ github.action_path }}/sushi-problem-matcher.json"
