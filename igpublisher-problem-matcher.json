@@ -1,0 +1,15 @@
+{
+  "problemMatcher": [
+    {
+      "owner": "igpublisher",
+      "severity": "error",
+      "pattern": [
+        {
+          "regexp": "^([a-zA-Z0-9_\\.]+(Exception|Error)): (.+)$",
+          "code": 1,
+          "message": 3
+        }
+      ]
+    }
+  ]
+}

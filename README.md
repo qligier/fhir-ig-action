@@ -10,6 +10,7 @@ This action provides the following functionality for [GitHub Actions](actions) u
 
 - Build a FHIR IG with the [IG Publisher](igpublisher)
 - Use the set versions of the [IG Publisher](igpublisher) and [SUSHI](sushi) (if needed)
+- Matches IG Publisher and Sushi errors in GitHub
 
 ## Usage
 
