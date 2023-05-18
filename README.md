@@ -6,10 +6,11 @@
 ![GitHub](https://img.shields.io/github/license/qligier/fhir-ig-action)
 [![CHANGELOG](https://img.shields.io/badge/-CHANGELOG-blue)](https://github.com/qligier/fhir-ig-action/blob/main/CHANGELOG.md)
 
-This action provides the following functionality for [GitHub Actions](actions) users:
+This action provides the following functionality for [GitHub Actions](https://docs.github.com/en/actions) users:
 
-- Build a FHIR IG with the [IG Publisher](igpublisher)
-- Use the set versions of the [IG Publisher](igpublisher) and [SUSHI](sushi) (if needed)
+- Build a FHIR IG with the [IG Publisher](https://github.com/HL7/fhir-ig-publisher/)
+- Use the set versions of the [IG Publisher](https://github.com/HL7/fhir-ig-publisher/) and
+  [SUSHI](https://github.com/FHIR/sushi) (if needed)
 - Matches IG Publisher and Sushi errors in GitHub
 
 ## Usage
@@ -59,7 +60,9 @@ jobs:
           sushi: "2.10"
 ```
 
-To build an IG in another directory, you should use the [working-directory](idstepsrun) configuration:
+To build an IG in another directory, you should use the
+[working-directory](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsrun)
+configuration:
 
 ```yaml
 name: Build the IG
@@ -86,8 +89,3 @@ Code contributions must pass the code checks: [shfmt](https://github.com/patrick
 [GitHub Action file](https://github.com/qligier/fhir-ig-action/blob/main/.github/workflows/verify.yml) for details.
 
 ![Alt](https://repobeats.axiom.co/api/embed/606c44316ea2a19b24c7fd98f732796195955edc.svg "Repobeats analytics image")
-
-[igpublisher]: https://github.com/HL7/fhir-ig-publisher/
-[sushi]: https://github.com/FHIR/sushi
-[actions]: https://docs.github.com/en/actions
-[idstepsrun]: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsrun
