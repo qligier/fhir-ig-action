@@ -9,7 +9,7 @@
           "code": 1
         },
         {
-          "regexp": "^(.+)$",
+          "regexp": "^(java\\.lang\\.Exception)",
           "message": 1
         }
       ]
