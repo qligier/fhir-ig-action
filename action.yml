@@ -63,7 +63,7 @@ runs:
       shell: bash
       run: |
         mkdir ./input-cache
-        curl -L https://github.com/HL7/fhir-ig-publisher/releases/${{ inputs.ig-publisher }}/download/publisher.jar -o ./input-cache/publisher.jar
+        curl -sS -L https://github.com/HL7/fhir-ig-publisher/releases/${{ inputs.ig-publisher }}/download/publisher.jar -o ./input-cache/publisher.jar
         chmod +x ./input-cache/publisher.jar
 
     # We can build the IG now
