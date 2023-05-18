@@ -85,7 +85,7 @@ This project is released under the [MIT License](https://github.com/qligier/fhir
 Issues and pull requests are very welcome :blue_heart:
 
 Code contributions must pass the code checks: [shfmt](https://github.com/patrickvane/shfmt),
-[shellcheck](https://www.shellcheck.net) and [Prettier](https://prettier.io). See the
+[ShellCheck](https://www.shellcheck.net) and [Prettier](https://prettier.io). See the
 [GitHub Action file](https://github.com/qligier/fhir-ig-action/blob/main/.github/workflows/verify.yml) for details.
 
 ![Alt](https://repobeats.axiom.co/api/embed/606c44316ea2a19b24c7fd98f732796195955edc.svg "Repobeats analytics image")
