@@ -25,16 +25,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      # https://github.com/panubo/setup-bats-action
-      - name: Setup Bats
-        uses: panubo/setup-bats-action@v2
-        with:
-          bats-version: 1.9.0
-
       # https://github.com/brokenpip3/setup-bats-libs
       - name: Setup Bats & libraries
         uses: brokenpip3/setup-bats-libs@1.0.0
         with:
+          bats-install: true
+          bats-version: latest
           support-path: ${{ github.workspace }}/test/test_helper/bats-support
           assert-path: ${{ github.workspace }}/test/test_helper/bats-assert
           detik-install: false
