@@ -33,7 +33,7 @@ jobs:
 
       # https://github.com/brokenpip3/setup-bats-libs
       - name: Setup Bats libraries
-        uses: brokenpip3/setup-bats-libs@0.1.0
+        uses: brokenpip3/setup-bats-libs@1.0.0
         with:
           support-path: ${{ github.workspace }}/test/test_helper/bats-support
           assert-path: ${{ github.workspace }}/test/test_helper/bats-assert
