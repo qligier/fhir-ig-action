@@ -10,6 +10,10 @@ inputs:
     description: "The SUSHI version to use. 'latest' | 'false' | 'x' | 'x.y' | 'x.y.z'"
     required: false
     default: "false"
+  java-flags:
+    description: "Flags to pass to the 'java' command"
+    required: false
+    default: ""
 
 runs:
   using: "composite"
@@ -82,7 +86,7 @@ runs:
       run: |
         echo "::add-matcher::${{ github.action_path }}/igpublisher-problem-matcher.json"
         echo "::add-matcher::${{ github.action_path }}/sushi-problem-matcher.json"
-        java -jar input-cache/publisher.jar ig.ini
+        java ${{ inputs.java-flags }} -jar input-cache/publisher.jar ig.ini
         echo "::remove-matcher owner=igpublisher::"
         echo "::remove-matcher owner=sushi-error::"
         echo "::remove-matcher owner=sushi-warning::"
