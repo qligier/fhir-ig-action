@@ -27,6 +27,11 @@ runs:
         distribution: "zulu"
         java-version: "17"
 
+    - name: "Show default Java configuration"
+      shell: bash
+      run: java -XX:+PrintFlagsFinal -version | grep -iE 'HeapSize|PermSize|ThreadStackSize'
+      continue-on-error: true
+
     # Install ruby
     # https://github.com/ruby/setup-ruby
     - name: "Install Ruby"
