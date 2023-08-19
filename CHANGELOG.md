@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased]
 
+- Changed the Java distribution to [Zulu](https://www.azul.com/downloads/?package=jdk#zulu).
+
 ## [0.2.0] - 2023-05-18
 
 - Added matching of Sushi warnings and errors with a GitHub Action problem matcher.
