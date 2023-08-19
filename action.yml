@@ -77,7 +77,7 @@ runs:
       run: |
         echo "::add-matcher::${{ github.action_path }}/igpublisher-problem-matcher.json"
         echo "::add-matcher::${{ github.action_path }}/sushi-problem-matcher.json"
-        java -jar input-cache/publisher.jar ig.ini
+        java -Xmx4G -jar input-cache/publisher.jar ig.ini
         echo "::remove-matcher owner=igpublisher::"
         echo "::remove-matcher owner=sushi-error::"
         echo "::remove-matcher owner=sushi-warning::"
