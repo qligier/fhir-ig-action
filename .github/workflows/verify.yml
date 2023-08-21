@@ -27,7 +27,7 @@ jobs:
 
       # https://github.com/brokenpip3/setup-bats-libs
       - name: Setup Bats & libraries
-        uses: brokenpip3/setup-bats-libs@1.0.0
+        uses: brokenpip3/setup-bats-libs@1.5.1
         with:
           bats-install: true
           bats-version: latest
