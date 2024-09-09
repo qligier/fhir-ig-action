@@ -25,9 +25,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # https://github.com/brokenpip3/setup-bats-libs
+      # https://github.com/bats-core/bats-action
       - name: Setup Bats & libraries
-        uses: brokenpip3/setup-bats-libs@1.5.2
+        uses: bats-core/bats-action@2.0.0
         with:
           bats-install: true
           bats-version: latest
