@@ -40,7 +40,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: qligier/fhir-ig-action@v0.3.0
 ```
 
@@ -53,7 +53,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: qligier/fhir-ig-action@v0.3.0
         with:
           ig-publisher: "1.3.5"
@@ -71,7 +71,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: qligier/fhir-ig-action@v0.3.0
         working-directory: ./folder/my-ig # This will use ./folder/my-ig/ig.ini
 ```
