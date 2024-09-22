@@ -11,7 +11,9 @@ This action provides the following functionality for [GitHub Actions](https://do
 - Build a FHIR® Implementation Guide with the [_IG Publisher_](https://github.com/HL7/fhir-ig-publisher/).
 - Use the set versions of the [_IG Publisher_](https://github.com/HL7/fhir-ig-publisher/) and
   [_SUSHI_](https://github.com/FHIR/sushi) (if needed).
-- Matches _IG Publisher_ and _SUSHI_ errors in _GitHub_, to easily spot issues
+- Matches _IG Publisher_ and _SUSHI_ errors in _GitHub_, to easily spot issues:
+  [![Preview of the problem matching with SUSHI](.github/problem_matcher_thumbnail.png)](.github/problem_matcher.png)
+  See also the live example of a [failing pull request](https://github.com/qligier/simple-test-ig/pull/1/files).
 
 ## Usage
 
