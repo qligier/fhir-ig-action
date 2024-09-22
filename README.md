@@ -8,10 +8,10 @@
 
 This action provides the following functionality for [GitHub Actions](https://docs.github.com/en/actions) users:
 
-- Build a FHIR IG with the [IG Publisher](https://github.com/HL7/fhir-ig-publisher/)
-- Use the set versions of the [IG Publisher](https://github.com/HL7/fhir-ig-publisher/) and
-  [SUSHI](https://github.com/FHIR/sushi) (if needed)
-- Matches IG Publisher and Sushi errors in GitHub
+- Build a FHIR® Implementation Guide with the [_IG Publisher_](https://github.com/HL7/fhir-ig-publisher/).
+- Use the set versions of the [_IG Publisher_](https://github.com/HL7/fhir-ig-publisher/) and
+  [_SUSHI_](https://github.com/FHIR/sushi) (if needed).
+- Matches _IG Publisher_ and _SUSHI_ errors in _GitHub_, to easily spot issues
 
 ## Usage
 
@@ -19,19 +19,19 @@ The action can be configured with the following inputs:
 
 <dl>
 <dt>ig-publisher</dt>
-<dd>The version of the IG Publisher to use. The value can be a full version (i.e. <em>x.y.z</em>) or the keyword 
+<dd>The version of the _IG Publisher_ to use. The value can be a full version (i.e. <em>x.y.z</em>) or the keyword 
 '<strong>latest</strong>'. The default value is '<em>latest</em>'.</dd>
 
 <dt>sushi</dt>
-<dd>The version of SUSHI to use. The value can be a partial or full version (i.e. <em>x</em>, <em>x.y</em> or 
-<em>x.y.z</em>), the keyword '<strong>latest</strong>', or the keyword '<strong>false</strong>' to disable SUSHI. The 
+<dd>The version of _SUSHI_ to use. The value can be a partial or full version (i.e. <em>x</em>, <em>x.y</em> or 
+<em>x.y.z</em>), the keyword '<strong>latest</strong>', or the keyword '<strong>false</strong>' to disable _SUSHI_. The 
 default value is '<strong>false</strong>'.</dd>
 </dl>
 
 ### Examples
 
-The following example will build an IG with the latest version of the IG Publisher, without SUSHI. The _ig.ini_ file is
-expected in the top directory of the project.
+The following example will build an Implementation Guide with the latest version of the _IG Publisher_, without
+_SUSHI_. The _ig.ini_ file is expected in the top directory of the project.
 
 ```yaml
 name: Build the IG
@@ -44,7 +44,7 @@ jobs:
       - uses: qligier/fhir-ig-action@v0.3.0
 ```
 
-Another example for a SUSHI IG, with specific versions:
+Another example for a _SUSHI_ Implementation Guide, with specific versions:
 
 ```yaml
 name: Build the IG
@@ -56,11 +56,11 @@ jobs:
       - uses: actions/checkout@v4
       - uses: qligier/fhir-ig-action@v0.3.0
         with:
-          ig-publisher: "1.3.5"
-          sushi: "2.10"
+          ig-publisher: "1.6.25"
+          sushi: "3.11.1"
 ```
 
-To build an IG in another directory, you should use the
+To build an Implementation Guide in another directory, you should use the
 [working-directory](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsrun)
 configuration:
 
@@ -89,3 +89,5 @@ Code contributions must pass the code checks: [shfmt](https://github.com/patrick
 [GitHub Action file](https://github.com/qligier/fhir-ig-action/blob/main/.github/workflows/verify.yml) for details.
 
 ![Alt](https://repobeats.axiom.co/api/embed/606c44316ea2a19b24c7fd98f732796195955edc.svg "Repobeats analytics image")
+
+_FHIR® is the registered trademark of HL7 and is used with the permission of HL7._
