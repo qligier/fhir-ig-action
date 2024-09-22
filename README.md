@@ -11,7 +11,7 @@ This action provides the following functionality for [GitHub Actions](https://do
 - Build a FHIR® Implementation Guide with the [_IG Publisher_](https://github.com/HL7/fhir-ig-publisher/).
 - Use the set versions of the [_IG Publisher_](https://github.com/HL7/fhir-ig-publisher/) and
   [_SUSHI_](https://github.com/FHIR/sushi) (if needed).
-- Matches _IG Publisher_ and _SUSHI_ errors in _GitHub_, to easily spot issues:
+- Matches _IG Publisher_ and _SUSHI_ errors in _GitHub_, to easily spot issues:<br>
   [![Preview of the problem matching with SUSHI](.github/problem_matcher_thumbnail.png)](.github/problem_matcher.png)
   See also the live example of a [failing pull request](https://github.com/qligier/simple-test-ig/pull/1/files).
 
@@ -21,13 +21,13 @@ The action can be configured with the following inputs:
 
 <dl>
 <dt>ig-publisher</dt>
-<dd>The version of the _IG Publisher_ to use. The value can be a full version (i.e. <em>x.y.z</em>) or the keyword 
-'<strong>latest</strong>'. The default value is '<em>latest</em>'.</dd>
+<dd>The version of the <em>IG Publisher</em> to use. The value can be a full version (i.e. <em>x.y.z</em>) or the
+keyword '<strong>latest</strong>'. The default value is '<em>latest</em>'.</dd>
 
 <dt>sushi</dt>
-<dd>The version of _SUSHI_ to use. The value can be a partial or full version (i.e. <em>x</em>, <em>x.y</em> or 
-<em>x.y.z</em>), the keyword '<strong>latest</strong>', or the keyword '<strong>false</strong>' to disable _SUSHI_. The 
-default value is '<strong>false</strong>'.</dd>
+<dd>The version of <em>SUSHI</em> to use. The value can be a partial or full version (i.e. <em>x</em>, <em>x.y</em> or 
+<em>x.y.z</em>), the keyword '<strong>latest</strong>', or the keyword '<strong>false</strong>' to disable
+<em>SUSHI</em>. The default value is '<strong>false</strong>'.</dd>
 </dl>
 
 ### Examples
