@@ -5,7 +5,7 @@ jobs:
     name: Static Checks
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       # Check bash formatting with shfmt (https://github.com/patrickvane/shfmt)
       - name: bash formatting
@@ -23,7 +23,7 @@ jobs:
     name: Tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       # https://github.com/bats-core/bats-action
       - name: Setup Bats & libraries
