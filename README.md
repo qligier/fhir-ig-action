@@ -20,10 +20,11 @@ This action provides the following functionality for [GitHub Actions](https://do
 
 The action can be configured with the following inputs:
 
-| Input        | Values                                 | Default value | Description                                                        | Since  |
-| ------------ | -------------------------------------- | ------------- | ------------------------------------------------------------------ | ------ |
-| ig-publisher | `x.y.z`, `latest`                      | `latest`      | The version of the <em>IG Publisher</em> to use.                   | v0.1.0 |
-| sushi        | `x`, `x.y`, `x.y.z`, `latest`, `false` | `false`       | The version of <em>SUSHI</em> to use, or `false` not to use SUSHI. | v0.1.0 |
+| Input                | Values                                 | Default value | Description                                                         | Since  |
+| -------------------- | -------------------------------------- | ------------- | ------------------------------------------------------------------- | ------ |
+| ig-publisher         | `x.y.z`, `latest`                      | `latest`      | The version of the _IG Publisher_ to use.                           | v0.1.0 |
+| sushi                | `x`, `x.y`, `x.y.z`, `latest`, `false` | `false`       | The version of _SUSHI_ to use, or `false` not to use SUSHI.         | v0.1.0 |
+| java-max-heap-memory | `8G`, `500m`, `8192k`, `8388608`       | `8G`          | The maximum heap memory for the Java VM running the _IG Publisher_. | v0.4.0 |
 
 ### Examples
 
@@ -55,6 +56,7 @@ jobs:
         with:
           ig-publisher: "1.6.25"
           sushi: "3.11.1"
+          java-max-heap-memory: 12G
 ```
 
 To build an Implementation Guide in another directory, you should use the

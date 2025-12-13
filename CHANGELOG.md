@@ -7,7 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased]
 
-- Update dependencies.
+- Updated dependencies.
+- Added the input `java-max-heap-memory` to configure the maximum heap memory for the Java VM running the _IG
+  Publisher_.
 
 ## [0.3.0] - 2023-08-19
 
