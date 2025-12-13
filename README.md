@@ -21,7 +21,7 @@ This action provides the following functionality for [GitHub Actions](https://do
 The action can be configured with the following inputs:
 
 | Input        | Values                                 | Default value | Description                                                        | Since  |
-|--------------|----------------------------------------|---------------|--------------------------------------------------------------------|--------|
+| ------------ | -------------------------------------- | ------------- | ------------------------------------------------------------------ | ------ |
 | ig-publisher | `x.y.z`, `latest`                      | `latest`      | The version of the <em>IG Publisher</em> to use.                   | v0.1.0 |
 | sushi        | `x`, `x.y`, `x.y.z`, `latest`, `false` | `false`       | The version of <em>SUSHI</em> to use, or `false` not to use SUSHI. | v0.1.0 |
 
@@ -32,7 +32,7 @@ _SUSHI_. The _ig.ini_ file is expected in the top directory of the project.
 
 ```yaml
 name: Build the IG
-on: [ push, pull_request ]
+on: [push, pull_request]
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -45,7 +45,7 @@ Another example for a _SUSHI_ Implementation Guide, with specific versions:
 
 ```yaml
 name: Build the IG
-on: [ push, pull_request ]
+on: [push, pull_request]
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -63,7 +63,7 @@ configuration:
 
 ```yaml
 name: Build the IG
-on: [ push, pull_request ]
+on: [push, pull_request]
 jobs:
   test:
     runs-on: ubuntu-latest
