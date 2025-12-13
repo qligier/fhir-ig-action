@@ -86,6 +86,16 @@ runs:
         echo "::remove-matcher owner=sushi-error::"
         echo "::remove-matcher owner=sushi-warning::"
 
+    # We can save the QA report as an artifact
+    - name: "Upload QA report"
+      uses: actions/upload-artifact@v6
+      if: success()
+      with:
+        name: "QA Report"
+        path: ./output/qa.html
+        compression-level: 9
+        retention-days: 14
+
 branding:
   icon: "play"
   color: "orange"
