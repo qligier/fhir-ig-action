@@ -13,22 +13,17 @@ This action provides the following functionality for [GitHub Actions](https://do
   [_SUSHI_](https://github.com/FHIR/sushi) (if needed).
 - Matches _IG Publisher_ and _SUSHI_ errors in _GitHub_, to easily spot issues:<br>
   [![Preview of the problem matching with SUSHI](.github/problem_matcher_thumbnail.png)](.github/problem_matcher.png)
+  <br>
   See also the live example of a [failing pull request](https://github.com/qligier/simple-test-ig/pull/1/files).
 
 ## Usage
 
 The action can be configured with the following inputs:
 
-<dl>
-<dt>ig-publisher</dt>
-<dd>The version of the <em>IG Publisher</em> to use. The value can be a full version (i.e. <em>x.y.z</em>) or the
-keyword '<strong>latest</strong>'. The default value is '<em>latest</em>'.</dd>
-
-<dt>sushi</dt>
-<dd>The version of <em>SUSHI</em> to use. The value can be a partial or full version (i.e. <em>x</em>, <em>x.y</em> or 
-<em>x.y.z</em>), the keyword '<strong>latest</strong>', or the keyword '<strong>false</strong>' to disable
-<em>SUSHI</em>. The default value is '<strong>false</strong>'.</dd>
-</dl>
+| Input        | Values                                 | Default value | Description                                                        | Since  |
+|--------------|----------------------------------------|---------------|--------------------------------------------------------------------|--------|
+| ig-publisher | `x.y.z`, `latest`                      | `latest`      | The version of the <em>IG Publisher</em> to use.                   | v0.1.0 |
+| sushi        | `x`, `x.y`, `x.y.z`, `latest`, `false` | `false`       | The version of <em>SUSHI</em> to use, or `false` not to use SUSHI. | v0.1.0 |
 
 ### Examples
 
@@ -37,7 +32,7 @@ _SUSHI_. The _ig.ini_ file is expected in the top directory of the project.
 
 ```yaml
 name: Build the IG
-on: [push, pull_request]
+on: [ push, pull_request ]
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -50,7 +45,7 @@ Another example for a _SUSHI_ Implementation Guide, with specific versions:
 
 ```yaml
 name: Build the IG
-on: [push, pull_request]
+on: [ push, pull_request ]
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -68,7 +63,7 @@ configuration:
 
 ```yaml
 name: Build the IG
-on: [push, pull_request]
+on: [ push, pull_request ]
 jobs:
   test:
     runs-on: ubuntu-latest
