@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated dependencies.
 - Added the input `java-max-heap-memory` to configure the maximum heap memory for the Java VM running the _IG
   Publisher_.
+- Added a step to save the generated QA report as an artifact.
 
 ## [0.3.0] - 2023-08-19
 
