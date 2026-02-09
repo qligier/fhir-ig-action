@@ -35,7 +35,7 @@ jobs:
 
       # https://github.com/bats-core/bats-action
       - name: Setup Bats & libraries
-        uses: bats-core/bats-action@3.0.1
+        uses: bats-core/bats-action@4.0.0
         with:
           bats-install: true
           bats-version: latest
