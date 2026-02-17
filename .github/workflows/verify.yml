@@ -35,8 +35,9 @@ jobs:
 
       # https://github.com/bats-core/bats-action
       - name: Setup Bats & libraries
-        uses: bats-core/bats-action@3.0.1
+        uses: bats-core/bats-action@4.0.0
         with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           bats-install: true
           bats-version: latest
           support-path: ${{ github.workspace }}/test/test_helper/bats-support
